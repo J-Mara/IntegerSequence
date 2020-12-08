@@ -35,13 +35,4 @@ public class Range implements IntegerSequence{
       throw new NoSuchElementException();
     }
   }
-
-  public int current(){
-    return current;
-  }
-
-  public int end(){
-    return end;
-  }
-
 }
