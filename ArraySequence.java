@@ -12,6 +12,17 @@ public class ArraySequence implements IntegerSequence{
     currentIndex = 0;
   }
 
+  public ArraySequence(IntegerSequence otherseq){
+    data = new int[otherseq.length()];
+    currentIndex = 0;
+    while(otherseq.hasNext()){
+      data[currentIndex] = otherseq.next();
+      currentIndex++;
+    }
+    currentIndex = 0;
+    otherseq.reset();
+  }
+
   public void reset(){
     currentIndex = 0;
   }
