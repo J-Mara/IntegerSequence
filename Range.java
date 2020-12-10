@@ -6,8 +6,9 @@ public class Range implements IntegerSequence{
 *@precondition: start <= end
 *@param start : the starting value (inclusive)
 *@param end : the ending value which is also inclusive.*/
-  public Range(int start,  int e){
-    end = e;
+  public Range(int start,  int end){
+    this.end = end;
+    this.start = start;
     current = start;
   }
 
@@ -15,7 +16,7 @@ public class Range implements IntegerSequence{
     current = start;
   }
   public int length(){
-    return start - end + 1;
+    return end - start + 1;
   }
 
   //When current is no longer a valid element in the range, it should return false.
